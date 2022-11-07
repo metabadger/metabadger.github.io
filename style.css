@@ -1,0 +1,235 @@
+@font-face{
+    font-family: Metabadger-Font-2021;
+    src: url(fonts/Metabadger-Font-2021.woff2);
+    src: url(fonts/Metabadger-Font-2021.woff);
+}
+@font-face{
+    font-family: Redaction;
+    src: url(fonts/Redaction35-Regular.woff2);
+}
+@font-face{
+    font-family: Bellon;
+    src: url(fonts/Bellon\ Serifs.woff2);
+}
+strong{
+    font-family: Bellon;
+    font-size: 24px;
+    line-height: 1;
+}
+
+html {
+    cursor: url(media/paw.png), auto;
+}
+a:hover, button:hover{cursor: url(media/paw.png), auto;}
+
+
+body{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+        
+    font-family: Redaction;
+    font-style: normal;
+    font-size: 20px;
+    margin-bottom: 1.5em;
+    background-color: rgb(225, 224, 224);
+    background-image: url(media/alpha.jpg);
+    background-attachment: fixed;
+}
+
+button{
+    border: 0px;
+    color: black;
+    background-color: white;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+video{
+    max-width: 100%;
+    display: block;
+}
+
+#title{
+    height: 140px;
+    max-width: 100%;
+    justify-self: center;
+}
+
+#pp{
+    width: 70px;
+    margin:auto;
+    align-self: center;
+}
+#description{
+    columns: 1/2;
+    max-width: 95%;
+    font-size: 18px;
+    text-align: justify;
+    animation: ani1 0.3s ease-out forwards;
+    opacity: 0;
+}
+#footer{
+    text-align: center;
+    animation: ani1 1s ease-out forwards;
+    opacity: 0;
+}
+@keyframes ani1{
+    100%{opacity: 1;}
+}
+
+.picto{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 5px;
+    margin: auto;
+}
+.info-grid{
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center; 
+}
+
+.sidebar{
+    grid-column: 1/2;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2.5fr 0.5fr;
+    height: 97%;
+    top: -5px;
+    left: -5px;
+    padding: 20px;
+    position: fixed;
+    background-color: white;
+    border-style: solid;
+    border-color: rgb(225, 224, 224);
+    border-width: 3px;
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+    #title{
+        content: url(media/metabadger-title-long.svg);
+        height: 80px;
+        width: 95%;
+    }
+    #pp{
+        display:none;
+    }
+    #description{
+        width: 90%;
+    }
+    .sidebar{
+      width: auto;
+      top: -20px;
+      left: -10px;
+      right: -30px;
+      grid-template-rows: 0.3fr 0.2fr;
+      height: auto;
+      position:fixed;
+      z-index: 999;
+      border-style:solid;
+      border-color: rgb(225, 224, 224);
+      border-width: 3px;
+      padding-bottom: 10px;
+    }
+    .picto{
+        height: 30px;
+        width: 30px;
+        margin-bottom: 5px;
+        margin: auto;
+    }
+    .info-grid{
+        grid-row: 2/3;
+        margin: auto;
+        grid-gap: 10px;
+        gap: 10px;
+    }
+  }
+
+.main-grid{
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-top: 140px;
+  padding: 5px;
+  grid-gap: 5px;
+  gap: 5px;
+  height: 100%;
+}
+@media only screen and (min-width: 640px) {
+    .main-grid{
+      grid-template-columns: 1fr;
+      grid-column-gap: 10px;
+      margin-top: 0px;
+      padding-left: 30px;
+    }
+    #description{
+        max-width: 280px;
+    }
+}
+@media only screen and (min-width: 860px) {
+    .main-grid{
+      grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .main-grid{
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 15px;
+      padding: 30px;
+      font-size: 18px;
+    }
+    #description{
+        max-width: 280px;
+    }
+}
+
+.projet-img{
+    position: relative;
+}
+.projet-desc {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s;
+  }
+.projet-desc h2{
+    font-family: Bellon;
+    font-size: 28px;
+    line-height: 1rem;
+}
+.projet-desc p{
+    font-size: 12px 100vh;
+    line-height: 1.5rem;
+}
+.projet-img:hover img{
+    filter: brightness(0%);
+    transition: brightness 2s;
+}
+.projet-img:hover .projet-desc {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+/* Hide Play button + controls on iOS */
+   video::-webkit-media-controls {
+       display:none !important;
+   }
+.hide {
+  display: none;
+}
