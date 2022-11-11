@@ -51,6 +51,11 @@ video{
     max-width: 100%;
     display: block;
 }
+h2{
+    font-family: Bellon;
+    font-size: 28px;
+    line-height: 1.5rem;
+}
 
 #title{
     height: 140px;
@@ -117,6 +122,7 @@ video{
         content: url(media/metabadger-title-long.svg);
         height: 80px;
         width: 95%;
+        margin-bottom: 10px;
     }
     #pp{
         display:none;
@@ -139,8 +145,8 @@ video{
       padding-bottom: 10px;
     }
     .picto{
-        height: 30px;
-        width: 30px;
+        height: 40px;
+        width: 40px;
         margin-bottom: 5px;
         margin: auto;
     }
@@ -164,7 +170,7 @@ video{
   height: 100%;
 }
 @media only screen and (min-width: 640px) {
-    .main-grid{
+    .main-grid {
       grid-template-columns: 1fr;
       grid-column-gap: 10px;
       margin-top: 0px;
@@ -178,6 +184,9 @@ video{
     .main-grid{
       grid-template-columns: 1fr 1fr;
     }
+    .main-grid-b{
+        grid-template-columns: 1fr;
+      }
 }
 @media only screen and (min-width: 1200px) {
     .main-grid{
@@ -185,6 +194,12 @@ video{
       grid-column-gap: 15px;
       padding: 30px;
       font-size: 18px;
+    }
+    .main-grid-b{
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 15px;
+        padding: 30px;
+        font-size: 18px;
     }
     #description{
         max-width: 280px;
@@ -210,7 +225,7 @@ video{
 .projet-desc h2{
     font-family: Bellon;
     font-size: 28px;
-    line-height: 1rem;
+    line-height: 1.5rem;
 }
 .projet-desc p{
     font-size: 12px 100vh;
@@ -224,7 +239,17 @@ video{
     visibility: visible;
     opacity: 1;
   }
-
+.expl{
+    grid-column: 1/-1;
+    margin-left: 10px;
+    padding: 20px;
+    text-align: justify;
+    background-color: #fff;
+    box-shadow: 0 0 25px 5px #fff;
+}
+.expl p{
+    max-width: 650px;
+}
 
 /* Hide Play button + controls on iOS */
    video::-webkit-media-controls {
