@@ -64,9 +64,8 @@ h2{
 }
 
 #pp{
-    width: 70px;
+    width: 285px;
     margin:auto;
-    align-self: center;
 }
 #description{
     columns: 1/2;
@@ -164,7 +163,7 @@ h2{
   grid-template-columns: 1fr;
   align-items: center;
   margin-top: 140px;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
   padding: 5px;
   grid-gap: 5px;
   gap: 5px;
