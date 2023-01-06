@@ -1,0 +1,399 @@
+html{
+    scroll-behavior: smooth;
+}
+img{
+    display: block;
+}
+
+.header{
+    position: fixed;
+width: 253px;
+height: 97px;
+left: 31px;
+top: 24px;
+}
+
+.infobox{
+
+    font-family: sans-serif, bold;
+    font-size: 18px;
+    position: absolute;
+    top: 85%;
+    bottom: 1%;
+    left: 88%;
+    right: 1%;
+    text-align: right;
+}
+
+.film-info{
+    position: fixed;
+    top: 130px;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 32px;
+    color: white;
+    text-align: left;
+    margin: 0 24px;
+}
+.film-info-2{
+    position: fixed;
+    top: 100px;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 21px;
+    color: black;
+    text-align: left;
+    margin: 0 24px;
+}
+#infoplus{
+    font-weight: bold;
+}
+#intro{
+    font-size: 21px;
+}
+
+.film-poster{
+    width: 100%;
+    overflow: visible;
+}
+.film-synopsis{
+    grid-row: 3/4;
+    grid-column: 1/2;
+    font-family: sans-serif;
+    font-size: 18px;
+    align-self:flex-start;
+    text-align: left;
+    color: white;
+    line-height: 1.5em;
+    padding-left: 24px;
+    padding-right: 40px;
+    margin-bottom: 24px;
+}
+
+
+.scroller{
+    position: absolute;
+    top: 90%;
+    left: 48%;
+    right: 48%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
+
+.frame{
+    position: absolute;
+    width: 605px;
+    height: 629px;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+
+.blue{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1000px 550px 400px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(47, 47, 149);
+    background-image: url(media/posters/legrandbleu.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+}
+.red{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1000px 550px 400px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(176, 54, 54);
+    background-image: url(media/posters/duel.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+}
+.yellow{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1000px 550px 400px;
+    width: 100%;
+    height: 100%;
+    background-image: url(media/posters/10557652.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+    background-color: rgb(213, 189, 55);
+}
+.black{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1000px 550px 400px;
+    width: 100%;
+    height: 100%;
+    background-image: url(media/posters/johnwick-poster.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+    background-color: black;
+}
+.green{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1000px 550px 400px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(32, 158, 20);
+    background-image: url(media/posters/20799762lpw-20799798-article-forrest-gump-cinema-jpg_7372886_1250x625.jpg);
+    background-size: 105%;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+}
+
+@media only screen and (max-width: 520px){
+    .header{
+        width: 85%;
+        margin-bottom: 20px;
+    }
+    .film-info{
+        top: 25%;
+        font-size: 26px;
+    }
+    .film-info-2{
+        top: 20%;
+        font-size: 21px;
+    }
+    .film-pic{
+        display: block;
+        grid-column: 1/2;
+        grid-row: 4/5;
+        max-width: 95%;
+    }
+    .frame{
+        max-width: 90%;
+        height: 55%;
+        top: 30%;
+    }
+    .black{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1000px 550px 220px 200px;
+        background-position-x: center;
+        background-size: 1790px;
+    }
+    .blue{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1000px 550px 250px 200px;
+        background-position-x: center;
+        background-size: 1790px;
+    }
+    .red{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1000px 550px 300px 200px;
+        background-position-x: center;
+        background-size: 1790px;
+    }
+    .green{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1000px 550px 200px 250px;
+        background-position-x: center;
+        background-size: 1790px;
+    }
+    .yellow{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1000px 550px 220px 200px;
+        background-size: 1790px;
+    }
+    .film-synopsis{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        
+    }
+    .film-pic{
+        display: block;
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+}
+@media only screen and (min-width: 520px){
+    .film-info{
+        top: 16%;
+        font-size: 26px;
+    }
+    .film-info-2{
+        font-size: 21px;
+        max-width: 50%;
+    }
+    .frame{
+        max-width: 90%;
+        height: 70%;
+        top: 30%;
+    }
+    .black{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1000px 550px 200px 300px;
+        background-position-x: center;
+        background-size: 1790px;
+    }
+    .blue{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1000px 550px 220px 300px;
+        background-position-x: center;
+        background-size: 1790px;
+    }
+    .red{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1000px 550px 240px 300px;
+        background-position-x: center;
+        background-size: 1790px;
+    }
+    .green{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1000px 550px 200px 300px;
+        background-position-x: center;
+        background-size: 1790px;
+    }
+    .yellow{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1000px 550px 200px 300px;
+        background-position-x: center;
+        background-size: 1790px;
+    }
+    .film-synopsis{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .film-pic{
+        display: block;
+        grid-column: 1/2;
+        grid-row: 4/5;
+        max-width: 95%;
+    }
+}
+@media only screen and (min-width: 860px){
+    .frame{
+        height: 80%;
+        bottom: 30%;
+    }
+    .blue{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1050px 300px 400px;
+    }
+    .red{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1050px 300px 400px;
+    }
+    .yellow{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1250px 300px 400px;
+    }
+    .black{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1050px 300px 400px;
+    }
+    .green{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1050px 290px 400px;
+    }
+    .film-pic{
+        display: block;
+        grid-row: 2/4;
+        grid-column: 2/4;
+        max-width: 100%;
+        max-height: 100%;
+        overflow-x: hidden;
+        padding-right: 48px;
+    }
+}
+@media only screen and (max-width: 930px){
+    .film-synopsis{
+        grid-column: 1/4;
+        margin-top: 20px;
+    }
+    .film-pic{
+        margin-left: 10px;
+    }
+}
+
+
+
+.natation{
+    position: absolute;
+    left: 23.41%;
+    right: 19.68%;
+    top: 0.04%;
+    bottom: 83.86%;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.natation:hover{
+    content: url(media/SVG/legrandbleu.svg);
+}
+.swimming-b{
+    padding-top: 50%;
+    width: 90%;
+}
+
+.picto{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.running{
+    position: absolute;
+    left: 70.75%;
+    right: 0%;
+    top: 24.02%;
+    bottom: 20.87%;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.running:hover{
+    content: url(media/SVG/forestgump.svg);
+}
+
+.horsing{
+    position: absolute;
+    left: 10.24%;
+    right: 33.05%;
+    top: 36.26%;
+    bottom: 25.79%;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.horsing:hover{
+    content: url(media/SVG/spirit.svg);
+    top: 40.02%;
+}
+
+.shooting{
+    position: absolute;
+    left: 0%;
+    right: 47.86%;
+    top: 18.24%;
+    bottom: 47.37%;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.shooting:hover{
+    content: url(media/SVG/johnwick.svg);
+}
+
+.swording{
+    position: absolute;
+    left: 22.7%;
+    right: 10.74%;
+    top: 77.32%;
+    bottom: -0.05%;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.swording:hover{
+    content: url(media/SVG/lesduelistes.svg);
+    top: 78.32%;
+}
