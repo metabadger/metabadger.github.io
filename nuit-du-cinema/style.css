@@ -98,7 +98,7 @@ top: 24px;
     height: 100%;
     background-color: rgb(47, 47, 149);
     background-image: url(media/posters/legrandbleu.jpg);
-    background-size: 100%;
+    background-size: 1790px;
     background-repeat: no-repeat;
     margin-bottom: 60px;
 }
@@ -110,7 +110,7 @@ top: 24px;
     height: 100%;
     background-color: rgb(176, 54, 54);
     background-image: url(media/posters/duel.png);
-    background-size: 100%;
+    background-size: 1790px;
     background-repeat: no-repeat;
     margin-bottom: 60px;
 }
@@ -120,8 +120,8 @@ top: 24px;
     grid-template-rows: 1000px 550px 400px;
     width: 100%;
     height: 100%;
-    background-image: url(media/posters/10557652.webp);
-    background-size: 100%;
+    background-image: url(media/posters/10557652.jpg);
+    background-size: 1790px;
     background-repeat: no-repeat;
     margin-bottom: 60px;
     background-color: rgb(213, 189, 55);
@@ -133,7 +133,7 @@ top: 24px;
     width: 100%;
     height: 100%;
     background-image: url(media/posters/johnwick-poster.jpg);
-    background-size: 100%;
+    background-size: 1790px;
     background-repeat: no-repeat;
     margin-bottom: 60px;
     background-color: black;
@@ -146,7 +146,7 @@ top: 24px;
     height: 100%;
     background-color: rgb(32, 158, 20);
     background-image: url(media/posters/20799762lpw-20799798-article-forrest-gump-cinema-jpg_7372886_1250x625.jpg);
-    background-size: 105%;
+    background-size: 1790px;
     background-repeat: no-repeat;
     margin-bottom: 60px;
 }
@@ -278,27 +278,27 @@ top: 24px;
     .blue{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1050px 300px 400px;
+        grid-template-rows: 1050px 300px 450px;
     }
     .red{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1050px 300px 400px;
+        grid-template-rows: 1050px 300px 450px;
     }
     .yellow{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1250px 300px 400px;
+        grid-template-rows: 1250px 300px 450px;
     }
     .black{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1050px 300px 400px;
+        grid-template-rows: 1050px 300px 450px;
     }
     .green{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1050px 290px 400px;
+        grid-template-rows: 1050px 290px 450px;
     }
     .film-pic{
         display: block;
@@ -317,6 +317,28 @@ top: 24px;
     }
     .film-pic{
         margin-left: 10px;
+    }
+}
+@media only screen and (min-width: 1500px){
+    .red{
+        grid-template-rows: 1200px 300px 550px;
+        background-size: 1950px;
+    }
+    .green{
+        grid-template-rows: 1200px 300px 550px;
+        background-size: 1950px;
+    }
+    .yellow{
+        grid-template-rows: 1200px 300px 550px;
+        background-size: 1950px;
+    }
+    .blue{
+        grid-template-rows: 1200px 300px 550px;
+        background-size: 1950px;
+    }
+    .black{
+        grid-template-rows: 1200px 300px 550px;
+        background-size: 1950px;
     }
 }
 
