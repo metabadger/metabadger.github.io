@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-memes.css">
+    <title>memes.jpg</title>
+</head>
+<body>
+    <div id="numbers">
+        <img src="media/content/memes/  (1).jpg" alt="">
+        <img src="media/content/memes/  (2).jpg" alt="">
+        <img src="media/content/memes/  (3).jpg" alt="">
+        <img src="media/content/memes/  (5).jpg" alt="">
+        <img src="media/content/memes/  (4).jpg" alt="">
+        <img src="media/content/memes/  (6).jpg" alt="">
+        <img src="media/content/memes/  (7).jpg" alt="">
+        <img src="media/content/memes/  (8).jpg" alt="">
+        <img src="media/content/memes/  (9).jpg" alt="">
+        <img src="media/content/memes/  (10).jpg" alt="">
+        <img src="media/content/memes/  (11).jpg" alt="">
+        <img src="media/content/memes/  (12).jpg" alt="">
+        <img src="media/content/memes/  (13).jpg" alt="">
+        <img src="media/content/memes/  (14).jpg" alt="">
+        <img src="media/content/memes/  (15).jpg" alt="">
+        <img src="media/content/memes/  (16).jpg" alt="">
+        <img src="media/content/memes/  (17).jpg" alt="">
+        <img src="media/content/memes/  (18).jpg" alt="">
+        <img src="media/content/memes/  (19).jpg" alt="">
+        <img src="media/content/memes/  (20).jpg" alt="">
+        <img src="media/content/memes/  (21).jpg" alt="">
+        <img src="media/content/memes/  (23).jpg" alt="">
+        <img src="media/content/memes/  (22).jpg" alt="">
+
+        
+    </div>
+    <script type="text/javascript">
+        var numbers = document.querySelector('#numbers');
+        var list = Array.from(numbers.children);
+        var newlist;
+
+        list.sort(function(a, b) {
+        return -1 + Math.random() * 3; // -1, 0, or 1
+        });
+
+        while (numbers.children.length > 0) {
+        numbers.removeChild(numbers.children[0]);
+        }
+        list.forEach(function(el) {
+        numbers.appendChild(el);
+        });
+    </script>
+</body>
