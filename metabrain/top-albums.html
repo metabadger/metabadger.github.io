@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-albums.css">
+    <title>some album references</title>
+    <link rel="icon" href="media/icons/disk.png">
+</head>
+<body>
+    <div id="numbers">
+        <div><img src="media/content/covers/am1.jpg" alt="Favorite Worst Nightmare album cover"><figcaption>Favorite Worst Nightmare, Artic Monkeys, 2007</figcaption></div>
+        <div><img src="media/content/covers/am2.jpg" alt=""><figcaption>Whatever People Say I Am, That's What I'm Not<br>Artic Monkeys, 2006</figcaption></div>
+        <div><img src="media/content/covers/black.jpg" alt="Paranoid album cover"><figcaption>Paranoid, Black Sabbath, 1970</figcaption></div>
+        <div><img src="media/content/covers/blues.jpg" alt="Orange album cover"><figcaption>Orange, John Spencer Blues Explosion, 1994</figcaption></div>
+        <div><img src="media/content/covers/boys.jpg" alt="The Mix Up album cover"><figcaption>The Mix-Up, Beasties Boys, 2007</figcaption></div>
+        <div><img src="media/content/covers/cat.jpg" alt="The Girl, The Cat and the Tree album cover"><figcaption>The Girl, The Cat and The Tree, LAUSSE THE CAT, 2018</figcaption></div>
+        <div><img src="media/content/covers/cowboy.jpg" alt="Cowboy Bebop Original Soundtrack album cover"><figcaption>COWBOY BEBOP, SEATBELTS, 1998</figcaption></div>
+       <div> <img src="media/content/covers/cyborg.jpg" alt="Cyborg album cover"><figcaption>Cyborg, Nekfeu, 2016</figcaption></div>
+        <div><img src="media/content/covers/dead60.jpg" alt="The Dead 60s album cover"><figcaption>The Dead 60s, The Dead 60s, 2005 </figcaption></div>
+        <div><img src="media/content/covers/delta.jpg" alt=""><figcaption>Delta Plane, Le Dé, 2016</figcaption></div>
+        <div><img src="media/content/covers/derdianan.jpg" alt=""><figcaption>Franz Ferdinand, Franz Ferdinand, 2004</figcaption></div>
+        <div><img src="media/content/covers/dogrel.jpg" alt=""><figcaption>Dogrel, Fontaines D.C., 2019</figcaption></div>
+        <div><img src="media/content/covers/exodus.png" alt=""><figcaption>Exodus, Bob Marley & The Wailers, 1977</figcaption></div>
+        <div><img src="media/content/covers/gang.jpg" alt=""><figcaption>Entertainment!, Gang of Four, 1979</figcaption></div>
+        <div><img src="media/content/covers/hero.jpg" alt=""><figcaption>A Hero's Death, Fontaines D.C., 2020</figcaption></div>
+        <div><img src="media/content/covers/horror.jpg" alt=""><figcaption>United States of Horror, Ho99o9, 2017</figcaption></div>
+        <div><img src="media/content/covers/hypno.jpg" alt=""><figcaption>The Hypnoflip Invasion, Stupeflip, 2011</figcaption></div>
+        <div><img src="media/content/covers/jack.jpg" alt=""><figcaption>Fear Of The Dawn, Jack White, 2022</figcaption></div>
+        <div><img src="media/content/covers/joy.jpg" alt=""><figcaption>Joy As An Act Of Resistance, IDLES, 2018</figcaption></div>
+        <div><img src="media/content/covers/kida.jpg" alt=""><figcaption>KID A, Radiohead, 2000</figcaption></div>
+        <div><img src="media/content/covers/kru.jpg" alt=""><figcaption>Con Todo El Mundo, Khruangbin, 2018</figcaption></div>
+        <div><img src="media/content/covers/lion.jpg" alt=""><figcaption>One Day As A Lion EP, One Day As A Lion, 2008</figcaption></div>
+        <img src="media/content/covers/love.jpg" alt="">
+        <img src="media/content/covers/neil-young-harvest.jpg" alt="Harvest album cover">
+        <img src="media/content/covers/news.jpg" alt="N.E.W.S album cover">
+        <img src="media/content/covers/ninja.jpg" alt="">
+        <img src="media/content/covers/order.png" alt="">
+        <img src="media/content/covers/orel1.jpg" alt="">
+        <img src="media/content/covers/party.jpg" alt="">
+        <img src="media/content/covers/police.jpg" alt="">
+        <img src="media/content/covers/radio.jpg" alt="">
+        <img src="media/content/covers/ratm.jpg" alt="">
+        <img src="media/content/covers/road.jpg" alt="">
+        <img src="media/content/covers/skinty.jpg" alt="">
+        <img src="media/content/covers/snake.webp" alt="">
+        <img src="media/content/covers/tubular.jpg" alt="">
+        <img src="media/content/covers/tweet.jpg" alt="">
+        <img src="media/content/covers/ufo.jpg" alt="">
+        <img src="media/content/covers/Ultra-Mono.jpg" alt="">
+        <img src="media/content/covers/virus.jpg" alt="">
+    </div>
+    <script type="text/javascript">
+        var numbers = document.querySelector('#numbers');
+        var list = Array.from(numbers.children);
+        var newlist;
+
+        list.sort(function(a, b) {
+        return -1 + Math.random() * 3; // -1, 0, or 1
+        });
+
+        while (numbers.children.length > 0) {
+        numbers.removeChild(numbers.children[0]);
+        }
+        list.forEach(function(el) {
+        numbers.appendChild(el);
+        });
+    </script>
+</body>
+</html>

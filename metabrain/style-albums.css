@@ -2,20 +2,33 @@
     display: grid;
     grid-template-columns: 1fr;
     background-color: white;
+    row-gap: 8px;
+    column-gap: 15px;
 }
 
 img{
     display: block;
     width: 100%;
     height: auto;
+    margin-bottom: 5px;
 }
 
-@media only screen and (min-width: 640px) { 
+figcaption{
+    color: grey;
+    font-size: 9px;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+div:hover{
+    background-color: yellow;
+}
+
+@media only screen and (min-width: 500px) { 
     #numbers{
         grid-template-columns: 1fr 1fr;
     }
 }
-@media only screen and (min-width: 860px) { 
+@media only screen and (min-width: 700px) { 
     #numbers{
         grid-template-columns: 1fr 1fr 1fr;
     }
