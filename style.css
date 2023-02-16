@@ -33,7 +33,7 @@ body{
     font-size: 20px;
     margin-bottom: 1.5em;
     background-color: rgb(225, 224, 224);
-    background-image: url(media/alpha.jpg);
+    background-image: url(media/fur-bg2.png);
     background-attachment: fixed;
 }
 
@@ -107,6 +107,7 @@ h2{
     left: -5px;
     padding: 20px;
     position: fixed;
+    z-index: 999;
     background-color: white;
     border-style: solid;
     border-color: #fff;
@@ -254,6 +255,20 @@ h2{
 }
 .expl p{
     max-width: 650px;
+}
+
+#bubble{
+    display: none;
+    position: absolute;
+    width: 60%;
+    top: 270px;
+    left: 270px;
+    z-index: 998;
+    transition: opacity .3s, visibility .3s;
+}
+#pp:hover .bubble{
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Hide Play button + controls on iOS */
