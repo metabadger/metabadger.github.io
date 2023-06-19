@@ -49,6 +49,10 @@ strong::selection{
     color:white;
     background-color: black;
 }
+i::selection{
+    color:white;
+    background-color: black;
+}
 
 button{
     border: 0px;
