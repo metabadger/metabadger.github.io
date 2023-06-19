@@ -37,7 +37,11 @@ body{
     background-attachment: fixed;
 }
 
-text::selection{
+p::selection{
+    color:white;
+    background-color: black;
+}
+h2::selection{
     color:white;
     background-color: black;
 }
