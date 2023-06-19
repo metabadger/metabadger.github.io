@@ -77,15 +77,6 @@ h2{
     font-size: 28px;
     line-height: 1.5rem;
 }
-a{
-    text-decoration:none;
-    color: red;
-}
-a:hover{
-    text-decoration:none;
-    color: white;
-    background-color:red;
-}
 
 #title{
     height: 140px;
