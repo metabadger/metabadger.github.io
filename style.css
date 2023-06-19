@@ -45,6 +45,10 @@ h2::selection{
     color:white;
     background-color: black;
 }
+strong::selection{
+    color:white;
+    background-color: black;
+}
 
 button{
     border: 0px;
