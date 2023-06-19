@@ -46,11 +46,11 @@ h2::selection{
     background-color: black;
 }
 strong::selection{
-    color:yellow;
+    color:white;
     background-color: black;
 }
 i::selection{
-    color:white;
+    color:yellow;
     background-color: black;
 }
 
