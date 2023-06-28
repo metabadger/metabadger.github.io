@@ -14,3 +14,13 @@ function toggleText() {
       text.style.display = "none";
     }
   }
+
+  function toggleImage() {
+    var img = document.getElementById("bubble");
+    if (img.style.display === "none") {
+      img.style.display = "flex";
+    
+    } else {
+      img.style.display = "none";
+    }
+  }
