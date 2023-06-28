@@ -50,12 +50,12 @@ strong::selection{
     background-color: black;
 }
 i::selection{
-    color:yellow;
+    color:white;
     background-color: black;
 }
 a::selection{
     color:white;
-    background-color:yellow;
+    background-color:blue;
 }
 
 button{
