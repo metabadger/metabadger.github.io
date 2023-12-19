@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SENTIENT MACHINE</title>
+  <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+
+  <style>
+    body{
+      padding: 15px;
+    }
+    /* Optional styling for the button */
+    #popupButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        content: url(/img/power-off.png);
+    }
+    #popupButton :hover{
+        content: url(/img/power-on.png);
+    }
+    #about{
+      color: black;
+    }
+    #about :hover{
+        background-color: black;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="about" style="font-size: large; font-family: 'Courier New', Courier, monospace;">
+    <a href="about.html" onclick="openPopup(this.href); return false;" style="text-decoration: none; color: black;"><span>about...</span></a>
+  </div>
+ <div style="
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    -webkit-transform: translate3d(-50%, -50%, 0); 
+    -moz-transform: translate3d(-50%, -50%, 0);  
+    transform: translate3d(-50%, -50%, 0);  ">
+    <button id="popupButton"><img  src="/img/power-off.png" style="display: block; width: 250px; height: auto;" alt=""></button>
+ </div>
+
+  <script>
+    const images = [
+      '/img/img1.png',
+      '/img/img2.png',
+      '/img/img3.png',
+      '/img/img4.png',
+      '/img/img5.png',
+      '/img/img6.png',
+      '/img/img7.png',
+      '/img/img8.png',
+      '/img/img9.png',
+      '/img/img10.png',
+      '/img/img11.png',
+      '/img/img12.png',
+      '/img/img13.png',
+      '/img/img14.png',
+      '/img/img15.png',
+      '/img/img16.png',
+      '/img/img17.png',
+      '/img/img18.png',
+      '/img/img19.png',
+      '/img/img20.png',
+      '/img/img21.png',
+      '/img/img22.png',
+      '/img/img23.png',
+      '/img/img24.png',
+      '/img/glitch.png',
+      // Add the URLs of your 24 images here
+      // Ensure the images are accessible via URLs
+    ];
+
+    const maxPopups = 8;
+    const openedPopups = [];
+
+    const closeOldestPopup = () => {
+      if (openedPopups.length >= maxPopups) {
+        const oldestPopup = openedPopups.shift();
+        if (oldestPopup && !oldestPopup.closed) {
+          oldestPopup.close();
+        }
+      }
+    };
+
+    const openPopup = (url) => {
+      closeOldestPopup();
+      const popup = window.open(url, '_blank', 'width=600,height=400');
+      openedPopups.push(popup);
+      if (!popup) {
+        console.error('Popup blocked');
+      }
+    };
+    const openPopups = () => {
+      let index = 0;
+      let lastPopupTime = Date.now();
+
+      const openImage = () => {
+        if (index < images.length) {
+          closeOldestPopup();
+          const popup = window.open(images[index], `Popup${index}`, 'width=800,height=600');
+          openedPopups.push(popup);
+          index++;
+          if (popup) {
+            setTimeout(openImage, 1800); // Change the delay (in milliseconds) between images here
+          } else {
+            console.error('Popup blocked');
+          }
+        } else {
+          const currentTime = Date.now();
+          if (currentTime - lastPopupTime > 1000) {
+            // Close all popups and the main window after 2 seconds of the last popup
+            openedPopups.forEach((popup) => {
+              if (popup && !popup.closed) {
+                popup.close();
+              }
+            });
+            window.close();
+          }
+        }
+        lastPopupTime = Date.now();
+      };
+
+      document.getElementById('popupButton').addEventListener('click', () => {
+        openImage();
+      });
+    };
+
+    // Call the function when the page loads
+    window.onload = openPopups;
+  </script>
+</body>
+</html>
